@@ -12,12 +12,14 @@ class gridass extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: ),children:List.generate(2, (index) => Card(color: Colors.blue,
+      body: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2),children:List.generate(2, (index) => Card(
+        color: Colors.blue,
               child: ListTile(
         leading: iconss[index],
         title: Text('Heart shaker'),
       ),
+
             ),
     )
       ));

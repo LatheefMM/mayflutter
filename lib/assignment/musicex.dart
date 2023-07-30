@@ -1,168 +1,187 @@
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-List musicpic = [
-  "https://images.unsplash.com/photo-1531463368359-151247409561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJpbGxpZSUyMGVpbGlzaCUyMHNpbmclMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1468141589425-dcddef77ddad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW5nbGlzaCUyMHNpbmdlciUyMGFsYnVtfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1533584592871-abb80e6e4ea2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFzZXRoZXRpYyUyMHBpY3R1cmUlMjBzaW5nZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1437855144889-40d3933d96a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhbW91cyUyMGVuZ2xpc2glMjBzaW5nZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1576838202636-d60ff3ee1fe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZhbW91cyUyMGVuZ2xpc2glMjBzaW5nZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1647968678725-5bf93bf20a10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJpbGxpZSUyMGVpbGlzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1508695666381-69deeaa78ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmlsbGllJTIwZWlsaXNoJTIwc2luZyUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1526218626217-dc65a29bb444?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmlsbGllJTIwZWlsaXNoJTIwc2luZyUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1529354235303-cc42f23d767a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTJ8fGFzZXRoZXRpYyUyMHBpY3R1cmUlMjBzaW5nZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZW5nbGlzaCUyMG11c2ljJTIwYWxidW18ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
-];
 
 void main() {
-  runApp(MaterialApp(
-    home: musicApp(),
+  runApp(MaterialApp(home: GridViewStackScreen(),
     debugShowCheckedModeBanner: false,
   ));
 }
 
-class musicApp extends StatelessWidget {
+class GridViewStackScreen extends StatelessWidget {
+  static String id = 'GridView_StackScreen';
+  List contentList = [
+    [
+      "https://media.istockphoto.com/id/1279654034/photo/studio-microphone-and-pop-shield-on-mic-in-the-empty-recording-studio-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=bw8TATpYbFE6vaX6czvC0WJJA_i_NsUijRG8Z0V-UDs=",
+      'POP MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1502967290/photo/old-cd-player.webp?b=1&s=170667a&w=0&k=20&c=5sQ02ZA4UrFi1MR_91naVkESNZ7XHaNJL5MrSsZ75js=',
+      'CAR MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1342504537/photo/black-young-woman-filming-herself-dancing-at-home-to-share-on-social-media.webp?b=1&s=170667a&w=0&k=20&c=fhCfM4P2lYe081jv37Y553dGzKuvZ3WmdgyGwdUBks0=',
+      'TICKTOK MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1353775192/photo/golden-youtube-play-icon-with-the-red-luxury-boxes-and-white-spheres-3d-illustration-of-lux.webp?b=1&s=170667a&w=0&k=20&c=uN2pqhwskQM-9ctJs_vKUZwBrEhoFdpxLAUKMxVEtoA=',
+      'Youtube music'
+    ],
+    [
+      'https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.webp?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=',
+      'TOP 50'
+    ],
+    [
+      'https://media.istockphoto.com/id/1324561072/photo/party-people-enjoy-concert-at-festival-summer-music-festival.webp?b=1&s=170667a&w=0&k=20&c=O5ZV-dsb8hWNxQMWyFa8bVwnebURDCbq29Ktw3DxJr0=',
+      'MUsiciannnnn'
+    ],
+    [
+
+      "https://media.istockphoto.com/id/1279654034/photo/studio-microphone-and-pop-shield-on-mic-in-the-empty-recording-studio-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=bw8TATpYbFE6vaX6czvC0WJJA_i_NsUijRG8Z0V-UDs=",
+      'KAT MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.webp?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=',
+      'TOP 5'
+    ],
+    [
+
+      "https://media.istockphoto.com/id/1279654034/photo/studio-microphone-and-pop-shield-on-mic-in-the-empty-recording-studio-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=bw8TATpYbFE6vaX6czvC0WJJA_i_NsUijRG8Z0V-UDs=",
+      'STAR MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1502967290/photo/old-cd-player.webp?b=1&s=170667a&w=0&k=20&c=5sQ02ZA4UrFi1MR_91naVkESNZ7XHaNJL5MrSsZ75js=',
+      'CAR MUSIC'
+    ],
+    [
+      'https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.webp?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=',
+      'TOP 50'
+    ],
+    [
+      'https://images.pexels.com/photos/1717070/pexels-photo-1717070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'Eglow music'
+    ],
+    [
+
+      "https://media.istockphoto.com/id/1279654034/photo/studio-microphone-and-pop-shield-on-mic-in-the-empty-recording-studio-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=bw8TATpYbFE6vaX6czvC0WJJA_i_NsUijRG8Z0V-UDs=",
+      'POP MUSIC'
+    ],
+    [
+      'https://images.pexels.com/photos/8285167/pexels-photo-8285167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'chill'
+    ],
+    [
+      'https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.webp?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=',
+      'Thykoodam bride'
+    ],
+    [
+      'https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'New site'
+    ],
+    [
+      'https://images.pexels.com/photos/11259542/pexels-photo-11259542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'vedio'
+    ],
+    [
+      'https://images.pexels.com/photos/11448162/pexels-photo-11448162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'REAL music'
+    ],
+    [
+      'https://media.istockphoto.com/id/1502967290/photo/old-cd-player.webp?b=1&s=170667a&w=0&k=20&c=5sQ02ZA4UrFi1MR_91naVkESNZ7XHaNJL5MrSsZ75js=',
+      'CAR MUSIC'
+    ],
+    [
+      'https://images.pexels.com/photos/711193/pexels-photo-711193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      '05-05'
+    ],
+  ];
+
   @override
+
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 24, 24, 24),
-        appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 24, 24, 24),
-            title: Center(
-              child: Text(
-                "Playlists",
-                style: GoogleFonts.raleway(
-                    textStyle: TextStyle(
-                        fontSize: 26,
-                        color: Color.fromARGB(255, 249, 159, 189)),
-                    fontWeight: FontWeight.w600),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Color(0xff121212),
+            floating: true,
+            pinned: false,
+            title: Center(child: Text("PlayLists",style: TextStyle(color: Color(0xfff8b3c2)),)),
+            bottom: AppBar(
+              backgroundColor: Color(0xff121212),
+              elevation: 0,
+              title: Container(
+                width: double.infinity,
+                height: 40,
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    isDense: true,
+                    hintText: "Search...",
+                    hintStyle: TextStyle(color: Color(0xfff8b3c2)),
+                    suffixIcon: Icon(Icons.search),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50)
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50)
+                    ),
+                  ),
+
+                ),
               ),
             ),
-            bottom: AppBar(
-              backgroundColor: const Color.fromARGB(255, 24, 24, 24),
-              elevation: 0,
-              title: SizedBox(
-                height: 55,
-                width: 510,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 20, left: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Color.fromARGB(255, 48, 47, 47),
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(),
-                            borderRadius: BorderRadius.circular(24)),
-                        hintText: "Search...",
-                        hintStyle: GoogleFonts.tajawal(
-                            fontSize: 21,
-                            fontWeight: FontWeight.w300,
-                            color: Color.fromARGB(255, 249, 159, 189)),
-                        suffixIcon: Icon(Icons.search),
-                        suffixIconColor: Color.fromARGB(255, 249, 159, 189)),
-                  ),
-                ),
-              ),
-            )),
-        body: ListView(
-          children: [
-            GridView.builder(
-              shrinkWrap: true,
-              itemCount: musicpic.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 20),
-              itemBuilder: (context, index) {
-                return SizedBox(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 10,
-                      right: 20,
-                    ),
-                    child: Center(
-                      child: Container(
-                        height: 220,
-                        width: 220,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(musicpic[index]),
-                              fit: BoxFit.cover),
-                          border: Border.all(style: BorderStyle.solid),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(10),
-                              topRight: Radius.circular(10),
-                              bottomLeft: Radius.circular(10),
-                              bottomRight: Radius.circular(10)),
+          ),
+
+          SliverGrid.builder(
+            // padding: const EdgeInsets.all(20),
+            itemCount: contentList.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisExtent: 150,
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10),
+            itemBuilder: (context, index) =>
+                Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                              contentList[index][0],
+                            )
                         ),
+                        // child: ClipRRect(
+                        //   borderRadius: BorderRadius.circular(8.0),
+                        //   child: Image.network(
+                        //     contentList[index][0],
+                        //     fit: BoxFit.cover,
+                        //   ),
+                        // ),
                       ),
                     ),
-                  ),
-                );
-              },
-            )
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.black,
-            elevation: 10,
-            type: BottomNavigationBarType.fixed,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                  color: Color.fromARGB(255, 249, 159, 189),
+                    Positioned(
+                      bottom: 20,
+                      left: 20,
+                      child: Text(
+                        contentList[index][1],
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    )
+                  ],
                 ),
-                label: "Home",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.search,
-                  color: Color.fromARGB(255, 249, 159, 189),
-                ),
-                label: 'Search',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.playlist_add,
-                  color: Color.fromARGB(255, 249, 159, 189),
-                ),
-                label: 'Playlist',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.favorite,
-                  color: Color.fromARGB(255, 249, 159, 189),
-                ),
-                label: "Favoute",
-              )
-            ]),
+          ),
+        ],
       ),
     );
+
+
   }
 }
-
-
-// SizedBox(
-//             height: 55,
-//             width: 510,
-//             child: Padding(
-//               padding: const EdgeInsets.only(right: 20, left: 20),
-//               child: TextField(
-//                 decoration: InputDecoration(
-//                     filled: true,
-//                     fillColor: Color.fromARGB(255, 48, 47, 47),
-//                     border: OutlineInputBorder(
-//                         borderSide: BorderSide(),
-//                         borderRadius: BorderRadius.circular(24)),
-//                     hintText: "search...",
-//                     hintStyle: GoogleFonts.tajawal(
-//                         fontSize: 21,
-//                         fontWeight: FontWeight.w300,
-//                         color: Color.fromARGB(255, 249, 159, 189)),
-//                     suffixIcon: Icon(Icons.search),
-//                     suffixIconColor: Color.fromARGB(255, 249, 159, 189)),
-//               ),
-//             ),
-//           ),,

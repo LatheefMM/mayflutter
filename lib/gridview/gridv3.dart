@@ -6,7 +6,7 @@ void main(){
 }
 class GridView3 extends StatelessWidget{
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext cont ext) {
     return Scaffold(
       body: GridView.count(crossAxisCount: 5,
         crossAxisSpacing: 20,
