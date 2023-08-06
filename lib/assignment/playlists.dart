@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false,home: play(),));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false,
+    theme: ThemeData.dark(
+    ),
+    home: play(),));
 }
 
 class play extends StatelessWidget{
@@ -88,14 +91,14 @@ class play extends StatelessWidget{
        ),
      ),
       bottomNavigationBar: BottomNavigationBar(backgroundColor:Colors.black,items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.pinkAccent,),
+        BottomNavigationBarItem(icon: Icon(Icons.home,),
           label: 'Home',),
-        BottomNavigationBarItem(icon: Icon(Icons.search,color: Colors.pinkAccent,),
-            label: 'Search',),
+        BottomNavigationBarItem(icon: Icon(Icons.search,),
+            label: '',),
         BottomNavigationBarItem(icon: Icon(Icons.playlist_add_outlined,color: Colors.pinkAccent,),
-            label: 'Playlists'),
-        BottomNavigationBarItem(icon: Icon(Icons.more_horiz,color: Colors.pinkAccent,),
-        label: 'More')
+            label: ''),
+        BottomNavigationBarItem(icon: Icon(Icons.more_horiz,),
+        label: '')
 
 
       ]),

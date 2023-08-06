@@ -1,26 +1,34 @@
+
 import 'package:flutter/material.dart';
-void main(){
+
+void main() {
   runApp(MaterialApp(
     home: GridView3(),
   ));
 }
-class GridView3 extends StatelessWidget{
+
+class GridView3 extends StatelessWidget {
   @override
-  Widget build(BuildContext cont ext) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.count(crossAxisCount: 5,
-        crossAxisSpacing: 20,
+      body: GridView.count(
+        crossAxisCount: 2,
+        crossAxisSpacing: 30,
         mainAxisSpacing: 20,
-        children: List.generate(14, (index) => Container(
-          decoration: BoxDecoration(color: Colors.lightGreen),
-          child: Column(
-            children: [
-              Image.asset("assets/img_12.png",height: 30,),
-              Text("SHE",style: TextStyle(color: Colors.indigo),)
-            ],
-          ),
-        )),),
+        children: List.generate(
+            15,
+                (index) => Container(
+                decoration:BoxDecoration(
+                  color: Colors.black,),
+                child: Column(
+                  children: [
+                    Image.asset("assets/grapes.png",height: 100,),
+                    const Text(
+                      "Mango",
+                      style: TextStyle(color: Colors.yellow),)
+                  ],
+                ))),
+      ),
     );
   }
-
 }
