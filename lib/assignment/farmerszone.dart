@@ -1,3 +1,5 @@
+import 'package:carousel_slider/carousel_options.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -81,10 +83,63 @@ class farm extends StatelessWidget {
                         }),
                       ),
                     ),
-                    Image.asset(
-                      'assets/img_34.png',
-                      fit: BoxFit.fill,
-                    ),
+                    CarouselSlider(items: [
+                      Container(width: 500,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/1402281575/photo/bowls-of-oatmeal-with-mixed-fruits-topping.jpg?s=1024x1024&w=is&k=20&c=vl6tLxSbH7pVEZUMmBgdvegChKRZXnZIl1GJTduQ9aA=")),
+                          )),
+                      Container(width: 600,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/1311051864/photo/vegetarian-food-in-string-bag.jpg?s=1024x1024&w=is&k=20&c=6rhRPxj5teqji3esRrxgfTVoJwdaSv8fqvEjt1PiENI=")),
+                          )),
+                      Container(width: 600,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/1128687123/photo/shopping-bag-full-of-fresh-vegetables-and-fruits.jpg?s=1024x1024&w=is&k=20&c=ZP6MR_8ca51_wrOQFjp5HN0cK1TwmMHMc8sRZy9Dxn4=")),
+                          )),
+                      Container(width: 600,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/606211940/photo/fresh-vegetables-in-rajasthan-india-market.jpg?s=1024x1024&w=is&k=20&c=BbDFGk73GrTCvFSYALk1f-8wYo1ek4ERPc4Ah7kyC0A=")),
+                          )),
+                      Container(width: 600,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/1152750103/photo/sliced-alphonso-mangoes.jpg?s=1024x1024&w=is&k=20&c=icvyeqMLlk1M7sv4Vpjtn1qnXzbcNmvfUpJgjWOfI7I=")),
+                          )),
+                      Container(width: 600,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(fit: BoxFit.fitHeight,
+
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/id/1452512268/photo/withania-somnifera-or-ashwagandha-leaves-and-red-fruit-berries-on-wooden-background-winter.jpg?s=1024x1024&w=is&k=20&c=EuRqkhq1uJ_m8cZ0wp8pk-BOpX5-tCbZMZIGS0zzA3U=")),
+                          )),
+                    ], options: CarouselOptions(
+                        height: 200,
+                        //aspectRatio: 16/9,
+                        viewportFraction: .6,
+                        initialPage: 0,
+                        enableInfiniteScroll: true,
+                        autoPlay: true,
+                        autoPlayInterval: Duration(seconds: 2),
+                        autoPlayCurve: Curves.fastLinearToSlowEaseIn,
+                        enlargeCenterPage: true,
+                        enlargeFactor: .3,
+                        scrollDirection: Axis.horizontal
+
+                    )),
+
+                    // Image.asset(
+                    //   'assets/img_34.png',
+                    //   fit: BoxFit.fill,
+                    // ),
                     Card(
                       borderOnForeground: true,
                       shadowColor: Colors.blue,

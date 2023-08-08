@@ -66,16 +66,24 @@ class ital extends StatelessWidget{
                  padding: const EdgeInsets.all(8.0),
                  child: ClipRRect(child: Image.asset('assets/italy5.png',width: 90,height: 70,),
                  borderRadius: BorderRadius.circular(30),),
-               )
+               ),
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: ClipRRect(child: Image.asset('assets/kochi.png',width: 90,height: 70,),
+                   borderRadius: BorderRadius.circular(30),),
+               ),
              ],
            ),
          ),
 Card(
   child: ClipRRect(borderRadius: BorderRadius.circular(25),
-    child: Container(color: Colors.blueAccent,height: 30,width: 390,
-      child: Center(
-        child: Text('Press to Explore',
-          style: TextStyle(fontWeight: FontWeight.bold),),
+    child: ElevatedButton(
+      onPressed: () {  },
+      child: Container(color: Colors.blueAccent,height: 30,width: 390,
+        child: Center(
+          child: Text('Press to Explore',
+            style: TextStyle(fontWeight: FontWeight.bold),),
+        ),
       ),
     ),
   ),

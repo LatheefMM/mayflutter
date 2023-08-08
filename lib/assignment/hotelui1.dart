@@ -153,9 +153,8 @@ class hotel extends StatelessWidget{
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          items:[BottomNavigationBarItem(icon: Icon(Icons.search,
-            color: Colors.pink,),
+      bottomNavigationBar: BottomNavigationBar(selectedItemColor: Colors.deepPurple,
+          items:[BottomNavigationBarItem(icon: Icon(Icons.search,),
               label: 'Search'),
             BottomNavigationBarItem(icon: Icon(Icons.favorite_outlined),
             label: 'Fvaourite'),
